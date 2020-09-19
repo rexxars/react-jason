@@ -2,7 +2,7 @@
 
 # react-jason
 
-[![npm version](https://img.shields.io/npm/v/react-jason.svg?style=flat-square)](http://browsenpm.org/package/react-jason)[![Build Status](https://img.shields.io/travis/rexxars/react-jason/master.svg?style=flat-square)](https://travis-ci.org/rexxars/react-jason)![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-jason?style=flat-square)
+[![npm version](https://img.shields.io/npm/v/react-jason.svg?style=flat-square)](https://www.npmjs.com/package/react-jason)[![Build Status](https://img.shields.io/travis/rexxars/react-jason/master.svg?style=flat-square)](https://travis-ci.org/rexxars/react-jason)[![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-jason?style=flat-square)](https://bundlephobia.com/result?p=react-jason)
 
 Render syntax-highlighted JSON data using React. Lightweight.
 
