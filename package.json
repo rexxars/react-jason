@@ -8,14 +8,16 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
-    "src"
+    "src",
+    "themes.js"
   ],
   "engines": {
     "node": ">=10"
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "microbundle --jsx=React.createElement",
+    "prebuild": "rimraf dist",
+    "build": "microbundle --jsx=React.createElement && tsc --outDir dist/ src/themes/index.ts",
     "test": "tsdx test",
     "lint": "eslint .",
     "prepare": "tsdx build",
@@ -40,6 +42,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
+    "rimraf": "^3.0.2",
     "tsdx": "^0.13.3",
     "tslib": "^2.0.1",
     "typescript": "^4.0.3"
