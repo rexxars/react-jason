@@ -1,4 +1,5 @@
 import React, {useContext, Fragment} from 'react'
+import * as allThemes from './themes'
 import {JasonContext} from './context'
 import {defaultItemKeyGenerator} from './paths'
 import {anOldHopeClassic as defaultTheme} from './themes'
@@ -8,10 +9,10 @@ import {
   JasonContextInstance,
   ItemKeyGenerator,
   NodeWrapper as INodeWrapper,
-  NodeType
+  NodeType,
 } from './types'
 
-export * as themes from './themes'
+export const themes = allThemes
 
 export interface JasonProps {
   value: unknown
@@ -28,7 +29,8 @@ export const ReactJason = ({
   itemKeyGenerator,
   quoteAttributes = true,
 }: JasonProps) => {
-  const token = React.useMemo(() => createTokenMachine(theme || defaultTheme), [theme || defaultTheme])
+  const token = React.useMemo(() => createTokenMachine(theme || defaultTheme), [theme])
+
   const getItemKey = itemKeyGenerator || defaultItemKeyGenerator
   const context = React.useMemo<JasonContextInstance>(
     () => ({token, getItemKey, quoteAttributes, nodeWrapper}),
@@ -54,7 +56,13 @@ function node({
   nodeWrapper?: INodeWrapper
 }): JSX.Element {
   const wrap = (children: React.ReactElement, type: NodeType) =>
-    NodeWrapper ? <NodeWrapper path={path} type={type}>{children}</NodeWrapper> : children
+    NodeWrapper ? (
+      <NodeWrapper path={path} type={type}>
+        {children}
+      </NodeWrapper>
+    ) : (
+      children
+    )
 
   if (value === null) {
     return wrap(<NullNode />, 'nil')
@@ -72,7 +80,10 @@ function node({
     case 'boolean':
       return wrap(<BooleanNode value={value} path={path} depth={depth} />, 'boolean')
     case 'object':
-      return wrap(<ObjectNode value={value as Record<string, unknown>} path={path} depth={depth} />, 'object')
+      return wrap(
+        <ObjectNode value={value as Record<string, unknown>} path={path} depth={depth} />,
+        'object',
+      )
     default:
       throw new Error(`Unhandled type ${typeof value}`)
   }
@@ -154,7 +165,14 @@ function ObjectNode({
         const propPath = path ? `${path}.${key}` : key
         return (
           <Fragment key={propPath}>
-            <AttributePair attribute={key} value={val} depth={depth} path={propPath} nodeWrapper={nodeWrapper} isLastKey={index === lastKey} />
+            <AttributePair
+              attribute={key}
+              value={val}
+              depth={depth}
+              path={propPath}
+              nodeWrapper={nodeWrapper}
+              isLastKey={index === lastKey}
+            />
           </Fragment>
         )
       })}
@@ -191,14 +209,30 @@ function AttributeNode({value}: {value: string}) {
   )
 }
 
-function AttributePair({attribute, value, path, depth, isLastKey, nodeWrapper: NodeWrapper}: {attribute: string, value: unknown, path: string, depth: number, nodeWrapper?: INodeWrapper; isLastKey: boolean}) {
+function AttributePair({
+  attribute,
+  value,
+  path,
+  depth,
+  isLastKey,
+  nodeWrapper: NodeWrapper,
+}: {
+  attribute: string
+  value: unknown
+  path: string
+  depth: number
+  nodeWrapper?: INodeWrapper
+  isLastKey: boolean
+}) {
   const {char} = useTokenMachine()
   const pair = (
     <Fragment key={path}>
       {indent(depth)}
       <AttributeNode value={attribute} />
       {node({value, path, depth: depth + 1, nodeWrapper: NodeWrapper})}
-      {isLastKey ? '\n' : (
+      {isLastKey ? (
+        '\n'
+      ) : (
         <>
           {char(',')}
           {'\n'}
@@ -207,7 +241,13 @@ function AttributePair({attribute, value, path, depth, isLastKey, nodeWrapper: N
     </Fragment>
   )
 
-  return NodeWrapper ? <NodeWrapper type="attributePair" path={path}>{pair}</NodeWrapper> : pair
+  return NodeWrapper ? (
+    <NodeWrapper type="attributePair" path={path}>
+      {pair}
+    </NodeWrapper>
+  ) : (
+    pair
+  )
 }
 
 function NullNode() {

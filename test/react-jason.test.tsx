@@ -48,6 +48,7 @@ describe('react-jason', () => {
   })
 
   it('can specify theme', () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const defaultTheme = renderer.create(<ReactJason value={value} />).toJSON() as any
     const githubTheme = renderer.create(<ReactJason value={value} theme={github} />).toJSON()
     expect(githubTheme).toMatchSnapshot()

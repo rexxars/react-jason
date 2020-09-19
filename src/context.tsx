@@ -2,6 +2,7 @@ import React, {createContext, createElement, useCallback, useContext} from 'reac
 import {JasonContextInstance, JasonTheme, TokenMachine, TokenType} from './types'
 
 // We're always rendering the context with values, thus "any"
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const JasonContext = createContext<JasonContextInstance>({} as any)
 
 export function useTokenMachine(): {token: TokenMachine; char: (sym: string) => JSX.Element} {
