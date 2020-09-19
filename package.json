@@ -9,6 +9,7 @@
   "files": [
     "dist",
     "src",
+    "themes",
     "themes.js"
   ],
   "engines": {
@@ -17,7 +18,7 @@
   "scripts": {
     "start": "tsdx watch",
     "prebuild": "rimraf dist",
-    "build": "microbundle --jsx=React.createElement && tsc --outDir dist/ src/themes/index.ts",
+    "build": "microbundle --jsx=React.createElement && tsc --outDir themes src/themes/index.ts",
     "test": "tsdx test",
     "lint": "eslint .",
     "prepare": "npm run build",

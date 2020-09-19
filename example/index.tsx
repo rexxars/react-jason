@@ -1,7 +1,8 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import useInput from '@rooks/use-input'
-import {ReactJason, themes} from '../src/react-jason'
+import {ReactJason} from '../src/react-jason'
+import * as themes from '../src/themes'
 
 const prefersDarkMode =
   typeof window !== 'undefined' && typeof window.matchMedia === 'function'

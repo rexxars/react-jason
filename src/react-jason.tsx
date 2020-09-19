@@ -4,18 +4,17 @@ import {defaultItemKeyGenerator} from './paths'
 import {anOldHopeClassic as defaultTheme} from './themes'
 import {createTokenMachine, useToken, useTokenMachine} from './context'
 import {
-  JasonTheme,
-  JasonContextInstance,
+  EsModuleJasonTheme,
   ItemKeyGenerator,
-  NodeWrapper as INodeWrapper,
+  JasonContextInstance,
+  JasonTheme,
   NodeType,
+  NodeWrapper as INodeWrapper,
 } from './types'
-
-export * as themes from './themes'
 
 export interface JasonProps {
   value: unknown
-  theme?: JasonTheme
+  theme?: JasonTheme | EsModuleJasonTheme
   nodeWrapper?: INodeWrapper
   quoteAttributes?: boolean
   itemKeyGenerator?: ItemKeyGenerator
@@ -23,12 +22,15 @@ export interface JasonProps {
 
 export const ReactJason = ({
   value,
-  theme,
+  theme: wrappedTheme,
   nodeWrapper,
   itemKeyGenerator,
   quoteAttributes = true,
 }: JasonProps) => {
-  const token = React.useMemo(() => createTokenMachine(theme || defaultTheme), [theme])
+  const token = React.useMemo(
+    () => createTokenMachine(wrappedTheme ? unwrapTheme(wrappedTheme) : defaultTheme),
+    [wrappedTheme],
+  )
 
   const getItemKey = itemKeyGenerator || defaultItemKeyGenerator
   const context = React.useMemo<JasonContextInstance>(
@@ -259,4 +261,8 @@ function json(value: unknown) {
 
 function indent(depth: number): string {
   return '  '.repeat(depth)
+}
+
+function unwrapTheme(theme: JasonTheme | EsModuleJasonTheme): JasonTheme {
+  return '__esModule' in theme ? theme.default : theme
 }

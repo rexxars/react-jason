@@ -1,7 +1,6 @@
-import {JasonTheme} from '../types'
 import {sharedRoot} from './__shared__'
 
-const theme: JasonTheme = {
+export default {
   styles: {
     root: Object.assign({}, sharedRoot, {backgroundColor: '#212121'}),
     attribute: {color: '#a5e1ff'},
@@ -13,5 +12,3 @@ const theme: JasonTheme = {
     punctuation: {color: '#d9d9d9'},
   },
 }
-
-module.exports = theme
