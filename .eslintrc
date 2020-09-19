@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "sanity",
+    "sanity/react",
+    "sanity/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "prettier",
+    "prettier/react",
+    "sanity/typescript"
+  ],
+  "plugins": ["@typescript-eslint", "prettier", "react"]
+}

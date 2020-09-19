@@ -1,0 +1,1919 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`react-jason can specify theme 1`] = `
+<pre
+  style={
+    Object {
+      "backgroundColor": "#f8f8f8",
+      "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+      "fontFeatureSettings": "\\"liga\\" 0, \\"calt\\" 0",
+      "lineHeight": "1.5em",
+      "margin": 0,
+      "whiteSpace": "pre",
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    {
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    string
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#de1044",
+      }
+    }
+  >
+    "
+    value
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    number
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#008080",
+      }
+    }
+  >
+    13.37
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    bool
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#008080",
+      }
+    }
+  >
+    true
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    nil
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#008080",
+      }
+    }
+  >
+    null
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    array
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    [
+  </span>
+  
+    
+  <span
+    style={
+      Object {
+        "color": "#de1044",
+      }
+    }
+  >
+    "
+    primitive
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    ,
+  </span>
+  
+    
+  <span
+    style={
+      Object {
+        "color": "#de1044",
+      }
+    }
+  >
+    "
+    values
+    "
+  </span>
+  
+  
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    ]
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    object
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    {
+  </span>
+  
+
+      
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    nested
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    {
+  </span>
+  
+
+        
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    arbitrarily
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    {
+  </span>
+  
+
+          
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    deep
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#008080",
+      }
+    }
+  >
+    true
+  </span>
+  
+
+        
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    }
+  </span>
+  
+
+      
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    }
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    }
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    objectArray
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    [
+  </span>
+  
+    
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    {
+  </span>
+  
+
+        
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    _key
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#de1044",
+      }
+    }
+  >
+    "
+    grrm
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+        
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    name
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#de1044",
+      }
+    }
+  >
+    "
+    George. R. R. Martin
+    "
+  </span>
+  
+
+      
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    }
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    ,
+  </span>
+  
+    
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    {
+  </span>
+  
+
+        
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    _key
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#de1044",
+      }
+    }
+  >
+    "
+    jrrt
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+        
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    "
+    name
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#de1044",
+      }
+    }
+  >
+    "
+    J. R. R. Tolkien
+    "
+  </span>
+  
+
+      
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    }
+  </span>
+  
+  
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    ]
+  </span>
+  
+
+  
+  <span
+    style={
+      Object {
+        "color": "#333",
+      }
+    }
+  >
+    }
+  </span>
+</pre>
+`;
+
+exports[`react-jason can use class-based theme 1`] = `
+<pre
+  className="root"
+>
+  <span
+    className="punctuation"
+  >
+    {
+  </span>
+  
+
+    
+  <span
+    className="attribute"
+  >
+    "
+    string
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="string"
+  >
+    "
+    value
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    className="attribute"
+  >
+    "
+    number
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="number"
+  >
+    13.37
+  </span>
+  <span
+    className="punctuation"
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    className="attribute"
+  >
+    "
+    bool
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="boolean"
+  >
+    true
+  </span>
+  <span
+    className="punctuation"
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    className="attribute"
+  >
+    "
+    nil
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="nil"
+  >
+    null
+  </span>
+  <span
+    className="punctuation"
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    className="attribute"
+  >
+    "
+    array
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="punctuation"
+  >
+    [
+  </span>
+  
+    
+  <span
+    className="string"
+  >
+    "
+    primitive
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    ,
+  </span>
+  
+    
+  <span
+    className="string"
+  >
+    "
+    values
+    "
+  </span>
+  
+  
+  <span
+    className="punctuation"
+  >
+    ]
+  </span>
+  <span
+    className="punctuation"
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    className="attribute"
+  >
+    "
+    object
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="punctuation"
+  >
+    {
+  </span>
+  
+
+      
+  <span
+    className="attribute"
+  >
+    "
+    nested
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="punctuation"
+  >
+    {
+  </span>
+  
+
+        
+  <span
+    className="attribute"
+  >
+    "
+    arbitrarily
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="punctuation"
+  >
+    {
+  </span>
+  
+
+          
+  <span
+    className="attribute"
+  >
+    "
+    deep
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="boolean"
+  >
+    true
+  </span>
+  
+
+        
+  <span
+    className="punctuation"
+  >
+    }
+  </span>
+  
+
+      
+  <span
+    className="punctuation"
+  >
+    }
+  </span>
+  
+
+    
+  <span
+    className="punctuation"
+  >
+    }
+  </span>
+  <span
+    className="punctuation"
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    className="attribute"
+  >
+    "
+    objectArray
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="punctuation"
+  >
+    [
+  </span>
+  
+    
+  <span
+    className="punctuation"
+  >
+    {
+  </span>
+  
+
+        
+  <span
+    className="attribute"
+  >
+    "
+    _key
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="string"
+  >
+    "
+    grrm
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    ,
+  </span>
+  
+
+        
+  <span
+    className="attribute"
+  >
+    "
+    name
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="string"
+  >
+    "
+    George. R. R. Martin
+    "
+  </span>
+  
+
+      
+  <span
+    className="punctuation"
+  >
+    }
+  </span>
+  <span
+    className="punctuation"
+  >
+    ,
+  </span>
+  
+    
+  <span
+    className="punctuation"
+  >
+    {
+  </span>
+  
+
+        
+  <span
+    className="attribute"
+  >
+    "
+    _key
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="string"
+  >
+    "
+    jrrt
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    ,
+  </span>
+  
+
+        
+  <span
+    className="attribute"
+  >
+    "
+    name
+    "
+  </span>
+  <span
+    className="punctuation"
+  >
+    :
+  </span>
+   
+  <span
+    className="string"
+  >
+    "
+    J. R. R. Tolkien
+    "
+  </span>
+  
+
+      
+  <span
+    className="punctuation"
+  >
+    }
+  </span>
+  
+  
+  <span
+    className="punctuation"
+  >
+    ]
+  </span>
+  
+
+  
+  <span
+    className="punctuation"
+  >
+    }
+  </span>
+</pre>
+`;
+
+exports[`react-jason renders expected values 1`] = `
+<pre
+  style={
+    Object {
+      "backgroundColor": "#1e2024",
+      "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+      "fontFeatureSettings": "\\"liga\\" 0, \\"calt\\" 0",
+      "lineHeight": "1.5em",
+      "margin": 0,
+      "whiteSpace": "pre",
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    {
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    string
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#57bedf",
+      }
+    }
+  >
+    "
+    value
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    number
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#f2851e",
+      }
+    }
+  >
+    13.37
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    bool
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#f2851e",
+      }
+    }
+  >
+    true
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    nil
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#f2851e",
+      }
+    }
+  >
+    null
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    array
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    [
+  </span>
+  
+    
+  <span
+    style={
+      Object {
+        "color": "#57bedf",
+      }
+    }
+  >
+    "
+    primitive
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    ,
+  </span>
+  
+    
+  <span
+    style={
+      Object {
+        "color": "#57bedf",
+      }
+    }
+  >
+    "
+    values
+    "
+  </span>
+  
+  
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    ]
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    object
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    {
+  </span>
+  
+
+      
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    nested
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    {
+  </span>
+  
+
+        
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    arbitrarily
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    {
+  </span>
+  
+
+          
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    deep
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#f2851e",
+      }
+    }
+  >
+    true
+  </span>
+  
+
+        
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    }
+  </span>
+  
+
+      
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    }
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    }
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+    
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    objectArray
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    [
+  </span>
+  
+    
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    {
+  </span>
+  
+
+        
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    _key
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#57bedf",
+      }
+    }
+  >
+    "
+    grrm
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+        
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    name
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#57bedf",
+      }
+    }
+  >
+    "
+    George. R. R. Martin
+    "
+  </span>
+  
+
+      
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    }
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    ,
+  </span>
+  
+    
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    {
+  </span>
+  
+
+        
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    _key
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#57bedf",
+      }
+    }
+  >
+    "
+    jrrt
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    ,
+  </span>
+  
+
+        
+  <span
+    style={
+      Object {
+        "color": "#ef415a",
+      }
+    }
+  >
+    "
+    name
+    "
+  </span>
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    :
+  </span>
+   
+  <span
+    style={
+      Object {
+        "color": "#57bedf",
+      }
+    }
+  >
+    "
+    J. R. R. Tolkien
+    "
+  </span>
+  
+
+      
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    }
+  </span>
+  
+  
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    ]
+  </span>
+  
+
+  
+  <span
+    style={
+      Object {
+        "color": "#d1d3d7",
+      }
+    }
+  >
+    }
+  </span>
+</pre>
+`;
