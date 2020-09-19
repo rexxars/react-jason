@@ -2,10 +2,10 @@
   "name": "react-jason",
   "version": "1.0.1",
   "description": "Render syntax-highlighted JSON data using React. Lightweight.",
-  "main": "dist/react-jason.js",
-  "source": "src/react-jason.tsx",
-  "module": "dist/react-jason.esm.js",
-  "typings": "dist/react-jason.d.ts",
+  "main": "dist/index.js",
+  "source": "src/index.tsx",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "src"
