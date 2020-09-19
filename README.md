@@ -65,6 +65,28 @@ To specify your own styles, specify a `theme` object with either a `classes` obj
 - `quoteAttributes`: _boolean_ - Whether or not to quote attributes (JSON-style) or remove them where they are not needed (like in javascript). Default is `true`.
 - `theme`: _object_ - See theming/styling section above.
 
+## Switching theme on dark/light mode
+
+```js
+import {ReactJason} from 'react-jason'
+import {vscodeLight, vscodeDark} from 'react-jason/themes'
+
+const jsonData = {
+  /* ... */
+}
+
+export function YourComponent() {
+  const prefersDarkMode =
+    typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+      ? window.matchMedia('(prefers-color-scheme: dark)').matches
+      : false // use light theme by default?
+
+  const theme = prefersDarkMode ? vscodeDark : vscodeLight
+
+  return <ReactJason value={jsonData} theme={theme} />
+}
+```
+
 ## What's with the name?
 
 react-json was taken :shrugs:
