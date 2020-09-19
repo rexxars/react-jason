@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist themes",
     "build": "microbundle --jsx=React.createElement && tsc --outDir themes src/themes/index.ts",
     "test": "tsdx test",
     "lint": "eslint .",
