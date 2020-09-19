@@ -6,7 +6,9 @@
 
 Render syntax-highlighted JSON data using React. Lightweight.
 
-Yes, the name is [intentional](#whats-with-the-name) ;)
+Check out the [demo](https://react-jason.netlify.app/) to see what it can do.
+
+Yes, the name is intentional ;)
 
 ## Installation
 
