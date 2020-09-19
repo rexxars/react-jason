@@ -28,7 +28,7 @@ export const ReactJason = ({
   itemKeyGenerator,
   quoteAttributes = true,
 }: JasonProps) => {
-  const token = createTokenMachine(theme || defaultTheme)
+  const token = React.useMemo(() => createTokenMachine(theme || defaultTheme), [theme || defaultTheme])
   const getItemKey = itemKeyGenerator || defaultItemKeyGenerator
   const context = React.useMemo<JasonContextInstance>(
     () => ({token, getItemKey, quoteAttributes, nodeWrapper}),

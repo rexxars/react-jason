@@ -1,13 +1,8 @@
 import React, {createContext, createElement, useCallback, useContext} from 'react'
-import {defaultTheme} from './themes'
 import {JasonContextInstance, JasonTheme, TokenMachine, TokenType} from './types'
-import {defaultItemKeyGenerator} from './paths'
 
-export const JasonContext = createContext<JasonContextInstance>({
-  token: createTokenMachine(defaultTheme),
-  getItemKey: defaultItemKeyGenerator,
-  quoteAttributes: true,
-})
+// We're always rendering the context with values, thus "any"
+export const JasonContext = createContext<JasonContextInstance>({} as any)
 
 export function useTokenMachine(): {token: TokenMachine; char: (sym: string) => JSX.Element} {
   const {token} = useContext(JasonContext)
