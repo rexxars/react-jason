@@ -14,4 +14,4 @@ const theme: JasonTheme = {
   },
 }
 
-export default theme
+module.exports = theme

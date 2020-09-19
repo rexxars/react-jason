@@ -1,5 +1,4 @@
 import React, {useContext, Fragment} from 'react'
-import * as allThemes from './themes'
 import {JasonContext} from './context'
 import {defaultItemKeyGenerator} from './paths'
 import {anOldHopeClassic as defaultTheme} from './themes'
@@ -12,7 +11,7 @@ import {
   NodeType,
 } from './types'
 
-export const themes = allThemes
+export * as themes from './themes'
 
 export interface JasonProps {
   value: unknown
