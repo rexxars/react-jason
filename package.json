@@ -1,6 +1,6 @@
 {
   "name": "react-jason",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Render syntax-highlighted JSON data using React. Lightweight.",
   "main": "dist/index.js",
   "source": "src/index.tsx",
