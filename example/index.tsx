@@ -6,7 +6,7 @@ import {ReactJason, themes} from '../src/react-jason'
 const prefersDarkMode =
   typeof window !== 'undefined' && typeof window.matchMedia === 'function'
     ? window.matchMedia('(prefers-color-scheme: dark)').matches
-    : false // use light theme by default?
+    : true // use dark theme if we can't infer from OS
 
 const data = {
   string: 'Heisann',
