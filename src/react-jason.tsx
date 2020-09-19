@@ -1,9 +1,15 @@
 import React, {useContext, Fragment} from 'react'
 import {JasonContext} from './context'
 import {defaultItemKeyGenerator} from './paths'
-import {defaultTheme} from './themes'
+import {anOldHopeClassic as defaultTheme} from './themes'
 import {createTokenMachine, useToken, useTokenMachine} from './context'
-import {JasonTheme, JasonContextInstance, ItemKeyGenerator, NodeWrapper as INodeWrapper} from './types'
+import {
+  JasonTheme,
+  JasonContextInstance,
+  ItemKeyGenerator,
+  NodeWrapper as INodeWrapper,
+  NodeType
+} from './types'
 
 export * as themes from './themes'
 
@@ -47,26 +53,26 @@ function node({
   depth: number
   nodeWrapper?: INodeWrapper
 }): JSX.Element {
-  const wrap = (children: React.ReactElement) =>
-    NodeWrapper ? <NodeWrapper path={path}>{children}</NodeWrapper> : children
+  const wrap = (children: React.ReactElement, type: NodeType) =>
+    NodeWrapper ? <NodeWrapper path={path} type={type}>{children}</NodeWrapper> : children
 
   if (value === null) {
-    return wrap(<NullNode />)
+    return wrap(<NullNode />, 'nil')
   }
 
   if (Array.isArray(value)) {
-    return wrap(<ArrayNode value={value} path={path} depth={depth} />)
+    return wrap(<ArrayNode value={value} path={path} depth={depth} />, 'array')
   }
 
   switch (typeof value) {
     case 'string':
-      return wrap(<StringNode value={value} path={path} depth={depth} />)
+      return wrap(<StringNode value={value} path={path} depth={depth} />, 'string')
     case 'number':
-      return wrap(<NumberNode value={value} path={path} depth={depth} />)
+      return wrap(<NumberNode value={value} path={path} depth={depth} />, 'number')
     case 'boolean':
-      return wrap(<BooleanNode value={value} path={path} depth={depth} />)
+      return wrap(<BooleanNode value={value} path={path} depth={depth} />, 'boolean')
     case 'object':
-      return wrap(<ObjectNode value={value as Record<string, unknown>} path={path} depth={depth} />)
+      return wrap(<ObjectNode value={value as Record<string, unknown>} path={path} depth={depth} />, 'object')
     default:
       throw new Error(`Unhandled type ${typeof value}`)
   }
@@ -124,7 +130,15 @@ function ArrayNode({value, path, depth}: {value: unknown[]; path: string; depth:
   )
 }
 
-function ObjectNode({value: obj, path, depth}: {value: Record<string, unknown>; path: string; depth: number}) {
+function ObjectNode({
+  value: obj,
+  path,
+  depth,
+}: {
+  value: Record<string, unknown>
+  path: string
+  depth: number
+}) {
   const {nodeWrapper} = useContext(JasonContext)
   const {token, char} = useTokenMachine()
   const value = obj as Record<string, unknown>
@@ -140,17 +154,7 @@ function ObjectNode({value: obj, path, depth}: {value: Record<string, unknown>; 
         const propPath = path ? `${path}.${key}` : key
         return (
           <Fragment key={propPath}>
-            {indent(depth)}
-            <AttributeNode value={key}/>
-            {node({value: val, path: propPath, depth: depth + 1, nodeWrapper})}
-            {index < lastKey ? (
-              <>
-                {char(',')}
-                {'\n'}
-              </>
-            ) : (
-              '\n'
-            )}
+            <AttributePair attribute={key} value={val} depth={depth} path={propPath} nodeWrapper={nodeWrapper} isLastKey={index === lastKey} />
           </Fragment>
         )
       })}
@@ -185,6 +189,25 @@ function AttributeNode({value}: {value: string}) {
       {char(':')}{' '}
     </>
   )
+}
+
+function AttributePair({attribute, value, path, depth, isLastKey, nodeWrapper: NodeWrapper}: {attribute: string, value: unknown, path: string, depth: number, nodeWrapper?: INodeWrapper; isLastKey: boolean}) {
+  const {char} = useTokenMachine()
+  const pair = (
+    <Fragment key={path}>
+      {indent(depth)}
+      <AttributeNode value={attribute} />
+      {node({value, path, depth: depth + 1, nodeWrapper: NodeWrapper})}
+      {isLastKey ? '\n' : (
+        <>
+          {char(',')}
+          {'\n'}
+        </>
+      )}
+    </Fragment>
+  )
+
+  return NodeWrapper ? <NodeWrapper type="attributePair" path={path}>{pair}</NodeWrapper> : pair
 }
 
 function NullNode() {

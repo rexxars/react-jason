@@ -1,6 +1,7 @@
 export type TokenType =
   | 'array'
   | 'attribute'
+  | 'attributePair'
   | 'boolean'
   | 'nil'
   | 'number'
@@ -11,9 +12,18 @@ export type TokenType =
   | 'string'
   | 'unquotedAttribute'
 
+export type NodeType =
+  | 'array'
+  | 'attributePair'
+  | 'boolean'
+  | 'nil'
+  | 'number'
+  | 'object'
+  | 'string'
+
 export type TokenMachine = (token: TokenType, content?: React.ReactNode, as?: string) => JSX.Element
 export type ItemKeyGenerator = (item: unknown, basePath: string, index: number) => string
-export type NodeWrapper = React.ComponentType<{path: string}>
+export type NodeWrapper = React.ComponentType<{path: string; type: NodeType}>
 
 export type JasonStyles = Partial<Record<TokenType, React.CSSProperties>>
 export type JasonClasses = Partial<Record<TokenType, string>>
