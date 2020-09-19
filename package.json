@@ -20,7 +20,7 @@
     "build": "microbundle --jsx=React.createElement && tsc --outDir dist/ src/themes/index.ts",
     "test": "tsdx test",
     "lint": "eslint .",
-    "prepare": "tsdx build",
+    "prepare": "npm run build",
     "prepublishOnly": "npm test"
   },
   "dependencies": {},
