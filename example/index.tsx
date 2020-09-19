@@ -9,7 +9,7 @@ const prefersDarkMode =
     : true // use dark theme if we can't infer from OS
 
 const data = {
-  string: 'Heisann',
+  string: 'Hello, GitHub',
   number: 123.45,
   boolean: true,
   null: null,
