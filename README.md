@@ -93,7 +93,7 @@ export function YourComponent() {
 
 ## What's with the name?
 
-react-json was taken :shrugs:
+react-json was taken 🤷
 
 ## License
 
