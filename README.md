@@ -52,7 +52,7 @@ To use them, import them from `react-jason/themes`:
 
 ```js
 import {ReactJason} from 'react-jason'
-import {github} from 'react-jason/themes'
+import github from 'react-jason/themes/github'
 
 const jsonData = {
   /* ... */
@@ -70,6 +70,7 @@ To specify your own styles, specify a `theme` object with either a `classes` obj
 - `value`: _any_ - The JSON data to render. This is the only required property.
 - `quoteAttributes`: _boolean_ - Whether or not to quote attributes (JSON-style) or remove them where they are not needed (like in javascript). Default is `true`.
 - `theme`: _object_ - See theming/styling section above.
+- `sortKeys`: _boolean | function_ - Whether or not to sort object keys. A custom sorting function can also be provided (same signature as `Array.prototype.sort`, but receives a third argument - the parent object being sorted)
 
 ## Switching theme on dark/light mode
 

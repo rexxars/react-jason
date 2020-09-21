@@ -10,6 +10,7 @@ import {
   JasonTheme,
   NodeType,
   NodeWrapper as INodeWrapper,
+  ObjectKeySorter,
 } from './types'
 
 export interface JasonProps {
@@ -18,6 +19,7 @@ export interface JasonProps {
   nodeWrapper?: INodeWrapper
   quoteAttributes?: boolean
   itemKeyGenerator?: ItemKeyGenerator
+  sortKeys?: boolean | ObjectKeySorter
 }
 
 export const ReactJason = ({
@@ -25,6 +27,7 @@ export const ReactJason = ({
   theme: wrappedTheme,
   nodeWrapper,
   itemKeyGenerator,
+  sortKeys = false,
   quoteAttributes = true,
 }: JasonProps) => {
   const token = React.useMemo(
@@ -32,10 +35,11 @@ export const ReactJason = ({
     [wrappedTheme],
   )
 
+  const keySorter = sortKeys === true ? defaultKeySorter : sortKeys
   const getItemKey = itemKeyGenerator || defaultItemKeyGenerator
   const context = React.useMemo<JasonContextInstance>(
-    () => ({token, getItemKey, quoteAttributes, nodeWrapper}),
-    [token, getItemKey, quoteAttributes, nodeWrapper],
+    () => ({token, getItemKey, quoteAttributes, nodeWrapper, sortKeys: keySorter}),
+    [token, getItemKey, quoteAttributes, nodeWrapper, keySorter],
   )
 
   return (
@@ -151,10 +155,11 @@ function ObjectNode({
   path: string
   depth: number
 }) {
-  const {nodeWrapper} = useContext(JasonContext)
+  const {nodeWrapper, sortKeys} = useContext(JasonContext)
   const {token, char} = useTokenMachine()
   const value = obj as Record<string, unknown>
-  const keys = Object.keys(value)
+  const rawKeys = Object.keys(value)
+  const keys = sortKeys ? rawKeys.sort((a, b) => sortKeys(a, b, value)) : rawKeys
   const lastKey = keys.length - 1
   return token(
     'object',
@@ -265,4 +270,8 @@ function indent(depth: number): string {
 
 function unwrapTheme(theme: JasonTheme | EsModuleJasonTheme): JasonTheme {
   return '__esModule' in theme ? theme.default : theme
+}
+
+function defaultKeySorter(keyA: string, keyB: string): number {
+  return keyA.localeCompare(keyB)
 }

@@ -21,6 +21,12 @@ export type NodeType =
   | 'object'
   | 'string'
 
+export type ObjectKeySorter = (
+  keyA: string,
+  keyB: string,
+  parent: Record<string, unknown>,
+) => number
+
 export type TokenMachine = (token: TokenType, content?: React.ReactNode, as?: string) => JSX.Element
 export type ItemKeyGenerator = (item: unknown, basePath: string, index: number) => string
 export type NodeWrapper = React.ComponentType<{path: string; type: NodeType}>
@@ -41,6 +47,7 @@ export interface JasonTheme {
 export interface JasonContextInstance {
   token: TokenMachine
   getItemKey: ItemKeyGenerator
-  nodeWrapper?: NodeWrapper
   quoteAttributes: boolean
+  sortKeys: false | ObjectKeySorter
+  nodeWrapper?: NodeWrapper
 }

@@ -47,6 +47,7 @@ const themeList = {
 const App = () => {
   const {value: selectedTheme, onChange: onChangeTheme} = useInput('')
   const [quoteAttributes, setQuoteAttributes] = React.useReducer(prev => !prev, true)
+  const [sortKeys, setSortKeys] = React.useReducer(prev => !prev, false)
 
   let theme = prefersDarkMode ? themes.vscodeDark : themes.vscodeLight
   if (selectedTheme !== '') {
@@ -72,14 +73,24 @@ const App = () => {
           Quote properties
           <input
             type="checkbox"
-            name="Quote props"
+            name="quoteProps"
             onChange={setQuoteAttributes}
             checked={quoteAttributes}
           />
         </label>
+
+        <label>
+          Sort keys
+          <input type="checkbox" name="sortKeys" onChange={setSortKeys} checked={sortKeys} />
+        </label>
       </div>
 
-      <ReactJason value={data} theme={theme} quoteAttributes={quoteAttributes} />
+      <ReactJason
+        value={data}
+        theme={theme}
+        quoteAttributes={quoteAttributes}
+        sortKeys={sortKeys}
+      />
     </>
   )
 }
