@@ -119,6 +119,16 @@ function ArrayNode({value, path, depth}: {value: unknown[]; path: string; depth:
   const {token, char} = useTokenMachine()
   const {getItemKey, nodeWrapper} = useContext(JasonContext)
   const numItems = value.length
+  if (numItems === 0) {
+    return token(
+      'array',
+      <>
+        {char('[')}
+        {char(']')}
+      </>,
+    )
+  }
+
   return token(
     'array',
     <>
@@ -160,7 +170,18 @@ function ObjectNode({
   const value = obj as Record<string, unknown>
   const rawKeys = Object.keys(value)
   const keys = sortKeys ? rawKeys.sort((a, b) => sortKeys(a, b, value)) : rawKeys
-  const lastKey = keys.length - 1
+  const numKeys = keys.length
+  const lastKey = numKeys - 1
+  if (numKeys === 0) {
+    return token(
+      'object',
+      <>
+        {char('{')}
+        {char('}')}
+      </>,
+    )
+  }
+
   return token(
     'object',
     <>
