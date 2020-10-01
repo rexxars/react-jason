@@ -22,6 +22,9 @@ export interface JasonProps {
   sortKeys?: boolean | ObjectKeySorter
 }
 
+const JSON_TYPES = ['string', 'number', 'object', 'boolean']
+const isJsonType = (item: unknown): boolean => JSON_TYPES.includes(typeof item)
+
 export const ReactJason = ({
   value,
   theme: wrappedTheme,
@@ -137,9 +140,14 @@ function ArrayNode({value, path, depth}: {value: unknown[]; path: string; depth:
       {value.map((item, index) => {
         const itemPath = getItemKey(item, path, index)
         const isLast = index === numItems - 1
+
         return (
           <Fragment key={itemPath}>
-            {node({value: item, path: itemPath, depth: depth + 1, nodeWrapper})}
+            {isJsonType(item) ? (
+              node({value: item, path: itemPath, depth: depth + 1, nodeWrapper})
+            ) : (
+              <>&lt;{typeof item}&rt;</>
+            )}
             {isLast ? (
               `\n${indent(depth - 1)}`
             ) : (
@@ -190,6 +198,10 @@ function ObjectNode({
       {keys.map((key, index) => {
         const val = value[key]
         const propPath = path ? `${path}.${key}` : key
+        if (!isJsonType(val)) {
+          return null
+        }
+
         return (
           <Fragment key={propPath}>
             <AttributePair
